@@ -1031,3 +1031,24 @@ small {
   }
 
 }
+
+/* =========================================================
+   Activity 5 - Dynamic Projects
+   ========================================================= */
+
+#projects-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#projects-container .card {
+  height: 100%;
+}
+
+#projects-container .card-content {
+  min-height: 260px;
+}
+
+#load-more-projects {
+  margin: 20px 0 40px;
+}
