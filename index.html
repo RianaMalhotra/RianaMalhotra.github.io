@@ -761,7 +761,7 @@
 
         </div>
 
-        <!-- Experience 4 -->
+      <!-- Experience 4 -->
 <div class="card">
   <div class="card-content">
     <h5 class="blue-text text-darken-2">Software Member - Avionics Rocketry Subteam</h5>
@@ -793,14 +793,99 @@
     <!-- Fourth Section: Projects -->
     <section id="projects" class="section scrollspy">
 
-      <h3 class="page-title white-text teal">Projects</h3>
+  <h3 class="page-title white-text teal">Projects</h3>
 
-      <div class="container">
+  <div class="container">
 
-        <!-- Activity 5: Dynamic Project Content -->
-        <div id="projects-container" class="row"></div>
+    <!-- Terminal Project Explorer -->
+    <div class="project-terminal">
 
-        <!-- Load More Button -->
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="terminal-title">
+          riana@portfolio: ~/projects
+        </div>
+      </div>
+
+      <div class="terminal-body">
+
+        <div class="terminal-command">
+          <span class="terminal-prompt">$</span>
+          <span>ls -la ~/projects</span>
+        </div>
+
+        <div class="terminal-tree">
+
+          <button class="project-folder active"
+            type="button"
+            data-project="0">
+            <span class="tree-symbol">├──</span>
+            <i class="fa fa-folder"></i>
+            <span>wildfire-ai</span>
+          </button>
+
+          <button class="project-folder"
+            type="button"
+            data-project="1">
+            <span class="tree-symbol">├──</span>
+            <i class="fa fa-folder"></i>
+            <span>breadcrumb-navigation</span>
+          </button>
+
+          <button class="project-folder"
+            type="button"
+            data-project="2">
+            <span class="tree-symbol">├──</span>
+            <i class="fa fa-folder"></i>
+            <span>transitflow</span>
+          </button>
+
+          <button class="project-folder"
+            type="button"
+            data-project="3">
+            <span class="tree-symbol">├──</span>
+            <i class="fa fa-folder"></i>
+            <span>telme</span>
+          </button>
+
+          <button class="project-folder"
+            type="button"
+            data-project="4">
+            <span class="tree-symbol">├──</span>
+            <i class="fa fa-folder"></i>
+            <span>fpga-pong</span>
+          </button>
+
+          <button class="project-folder"
+            type="button"
+            data-project="5">
+            <span class="tree-symbol">└──</span>
+            <i class="fa fa-folder"></i>
+            <span>dj-booth</span>
+          </button>
+
+        </div>
+
+        <div class="terminal-status">
+          <span class="terminal-prompt">></span>
+          <span id="terminal-status-text">
+            Select a project to explore
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Activity 5: Dynamic Project Content -->
+    <div id="projects-container" class="row"></div>
+
+    <!-- Load More Button -->
         <div class="row center">
 
           <button
@@ -1920,54 +2005,67 @@
 
       let displayedProjects = 0;
 
-      function createProjectHTML(project) {
+      function createProjectHTML(project, index) {
 
-        return `
+  return `
 
-          <div class="col s12 m6 l4">
+    <div class="col s12 m6 l4 project-card-wrapper"
+         data-project-index="${index}">
 
-            <div class="card medium">
+      <div class="card project-card">
 
-              <div class="card-content">
+        <div class="card-content">
 
-                <span class="card-title teal-text hoverline">
-                  ${project.title}
-                </span>
+          <div class="project-card-header">
 
-                <p>
-                  ${project.description}
-                </p>
+            <span class="project-folder-icon">
+              <i class="fa fa-folder-open"></i>
+            </span>
 
-                <br>
-
-                <p>
-                  <b>Tools:</b> ${project.technologies}
-                </p>
-
-              </div>
-
-              <div class="card-action">
-
-                <a
-                  aria-label="Visit the GitHub repo for ${project.title}"
-                  href="${project.github}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-floating btn-large waves-effect waves-light blue-grey">
-
-                  <i class="fa fa-github"></i>
-
-                </a>
-
-              </div>
-
-            </div>
+            <span class="card-title teal-text hoverline">
+              ${project.title}
+            </span>
 
           </div>
 
-        `;
+          <p class="project-description">
+            ${project.description}
+          </p>
 
-      }
+          <div class="project-tools">
+
+            <span class="project-label">TOOLS</span>
+
+            <p>
+              ${project.technologies}
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="card-action">
+
+          <a
+            aria-label="Visit the GitHub repo for ${project.title}"
+            href="${project.github}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-floating btn-large waves-effect waves-light blue-grey">
+
+            <i class="fa fa-github"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+}
 
       function loadMoreProjects() {
 
@@ -1983,14 +2081,17 @@
             displayedProjects + projectsPerLoad
           );
 
-        nextProjects.forEach(function (project) {
+        nextProjects.forEach(function (project, index) {
 
-          projectsContainer.insertAdjacentHTML(
-            "beforeend",
-            createProjectHTML(project)
-          );
+  const projectIndex =
+    displayedProjects + index;
 
-        });
+  projectsContainer.insertAdjacentHTML(
+    "beforeend",
+    createProjectHTML(project, projectIndex)
+  );
+
+});
 
         displayedProjects += nextProjects.length;
 
@@ -2018,6 +2119,127 @@
       });
 
     </script>
+
+    <!-- Project Terminal Explorer -->
+<script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const projectFolders =
+      document.querySelectorAll(".project-folder");
+
+    const statusText =
+      document.getElementById("terminal-status-text");
+
+
+    projectFolders.forEach(function (folder) {
+
+      folder.addEventListener("click", function () {
+
+        const projectIndex =
+          parseInt(
+            folder.getAttribute("data-project"),
+            10
+          );
+
+        const project =
+          projects[projectIndex];
+
+
+        if (!project) {
+          return;
+        }
+
+
+        // Update active folder
+
+        projectFolders.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        folder.classList.add("active");
+
+
+        // Update terminal status
+
+        statusText.textContent =
+          "opening " +
+          project.title.toLowerCase() +
+          "...";
+
+
+        // Check if the project has already been loaded
+
+        let projectCard =
+          document.querySelector(
+            '[data-project-index="' +
+            projectIndex +
+            '"]'
+          );
+
+
+        // Dynamically load the selected project if needed
+
+        if (!projectCard) {
+
+          const projectsContainer =
+            document.getElementById(
+              "projects-container"
+            );
+
+          projectsContainer.insertAdjacentHTML(
+            "beforeend",
+            createProjectHTML(
+              project,
+              projectIndex
+            )
+          );
+
+          projectCard =
+            document.querySelector(
+              '[data-project-index="' +
+              projectIndex +
+              '"]'
+            );
+
+        }
+
+
+        // Scroll to selected project
+
+        if (projectCard) {
+
+          projectCard.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+
+          projectCard.classList.add(
+            "project-card-selected"
+          );
+
+
+          setTimeout(function () {
+
+            projectCard.classList.remove(
+              "project-card-selected"
+            );
+
+          }, 900);
+
+        }
+
+        statusText.textContent =
+          project.title.toLowerCase() +
+          " loaded";
+
+      });
+
+    });
+
+  });
+
+</script>
 
     <!-- Activity 6: Light Mode Toggle -->
     <script>
