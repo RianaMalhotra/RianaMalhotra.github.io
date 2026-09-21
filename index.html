@@ -836,32 +836,21 @@
 
 
     <!-- Terminal Status -->
-    <div class="terminal-status">
+<div class="terminal-status">
 
-      <span class="terminal-prompt">
-        >
-      </span>
+  <span class="terminal-prompt">
+    >
+  </span>
 
-      <span id="terminal-status-text">
-        Select a project to explore
-      </span>
-
-    </div>
-
-  </div>
+  <span id="terminal-status-text">
+    Click a project folder to view details
+  </span>
 
 </div>
 
 
-<!-- Activity 5: Dynamic Project Content -->
-<div
-  id="projects-container"
-  class="row">
-</div>
-
-
-<!-- Load More Button -->
-<div class="row center">
+<!-- Activity 5: Load More -->
+<div class="terminal-load-more">
 
   <button
     id="load-more-projects"
@@ -874,6 +863,18 @@
 
   </button>
 
+</div>
+
+
+  </div>
+
+</div>
+
+
+<!-- Activity 5: Dynamic Project Content -->
+<div
+  id="projects-container"
+  class="row">
 </div>
 
         <!-- Existing project cards kept for reference -->
@@ -2281,14 +2282,25 @@
 
 
     /*
-     * Initially display the first project.
-     */
+ * Initially show a message asking the
+ * user to select a project.
+ */
 
-    if (displayedProjects === projectsPerLoad) {
+if (displayedProjects === projectsPerLoad) {
 
-      renderProjectDetails(0);
+  const statusText =
+    document.getElementById(
+      "terminal-status-text"
+    );
 
-    }
+  if (statusText) {
+
+    statusText.textContent =
+      "Click a project folder to view details";
+
+  }
+
+}
 
 
     /*
