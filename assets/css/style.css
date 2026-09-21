@@ -1089,9 +1089,43 @@ small {
 }
 
 
-/* =========================================================
-   Light Mode
-   ========================================================= */
+/* =========================================
+   Activity 6: Light Mode Theme Toggle
+   ========================================= */
+
+.theme-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px 20px 12px;
+
+  font-family: inherit;
+  font-size: 16px;
+  text-align: left;
+
+  transition: all 0.25s ease;
+}
+
+.theme-toggle i {
+  padding: 0;
+  margin-right: 15px;
+  position: static;
+  font-size: 18px;
+}
+
+.theme-toggle:hover {
+  color: #38bdf8;
+  background-color: #0b172a;
+}
+
+
+/* Light mode */
 
 body.light-mode {
   background-color: #f8fafc;
@@ -1101,9 +1135,6 @@ body.light-mode {
 body.light-mode main {
   background-color: #f8fafc;
 }
-
-
-/* Navigation */
 
 body.light-mode nav {
   background-color: #ffffff;
@@ -1143,7 +1174,7 @@ body.light-mode ul.side-nav.fixed.table-of-contents li:not(.logo) a:hover span {
 }
 
 
-/* Theme Toggle */
+/* Theme toggle */
 
 body.light-mode .theme-toggle {
   color: #475569;
@@ -1155,7 +1186,7 @@ body.light-mode .theme-toggle:hover {
 }
 
 
-/* Mobile Navigation */
+/* Mobile navigation */
 
 body.light-mode nav.hide-on-large.only.trigger {
   background-color: #ffffff;
@@ -1176,7 +1207,7 @@ body.light-mode .name-title span {
 }
 
 
-/* Hero Section */
+/* Hero section */
 
 body.light-mode #intro.section {
   background:
@@ -1205,6 +1236,10 @@ body.light-mode #intro.section h5 {
   color: #334155 !important;
 }
 
+body.light-mode #intro.section h5[style] {
+  color: #334155 !important;
+}
+
 body.light-mode .overlay {
   background:
     radial-gradient(
@@ -1219,7 +1254,6 @@ body.light-mode .overlay {
 
 body.light-mode .card {
   background-color: #ffffff;
-
   box-shadow:
     0 4px 15px rgba(15, 23, 42, 0.08);
 }
@@ -1242,7 +1276,7 @@ body.light-mode .card-action span {
 }
 
 
-/* Headings */
+/* Section titles */
 
 body.light-mode .page-title {
   background:
@@ -1266,7 +1300,7 @@ body.light-mode #skills h4 {
 }
 
 
-/* Places */
+/* Places Travelled */
 
 body.light-mode #places h4 {
   color: #075985;
@@ -1289,7 +1323,7 @@ body.light-mode #contact a:not(.btn-floating):hover {
 }
 
 
-/* General Text */
+/* Grey text */
 
 body.light-mode .grey-text {
   color: #64748b !important;
