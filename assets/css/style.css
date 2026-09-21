@@ -1096,20 +1096,6 @@ small {
   background-color: #0b172a;
 }
 
-/* Contact button - Light Mode */
-
-body.light-mode .contactme {
-  color: #075985;
-  background-color: transparent;
-  border-color: #0284c7;
-}
-
-body.light-mode .contactme:hover {
-  color: #ffffff;
-  background-color: #0284c7;
-  border-color: #0284c7;
-}
-
 /* =========================================
    Activity 6: Light Mode Theme Toggle
    ========================================= */
@@ -1380,6 +1366,21 @@ body.light-mode #contact a:not(.btn-floating) {
 
 body.light-mode #contact a:not(.btn-floating):hover {
   color: #0284c7;
+}
+
+
+/* Contact button - Light Mode */
+
+body.light-mode .contactme {
+  color: #075985;
+  background-color: transparent;
+  border-color: #0284c7;
+}
+
+body.light-mode .contactme:hover {
+  color: #ffffff;
+  background-color: #0284c7;
+  border-color: #0284c7;
 }
 
 
