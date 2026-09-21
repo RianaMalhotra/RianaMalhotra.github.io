@@ -1052,3 +1052,245 @@ small {
 #load-more-projects {
   margin: 20px 0 40px;
 }
+
+/* =========================================================
+   Activity 6 - Light Mode Theme
+   ========================================================= */
+
+.theme-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px 20px 12px;
+
+  font-family: inherit;
+  font-size: 16px;
+  text-align: left;
+
+  transition: all 0.25s ease;
+}
+
+.theme-toggle i {
+  padding: 0;
+  margin-right: 15px;
+  position: static;
+  font-size: 18px;
+}
+
+.theme-toggle:hover {
+  color: #38bdf8;
+  background-color: #0b172a;
+}
+
+
+/* =========================================================
+   Light Mode
+   ========================================================= */
+
+body.light-mode {
+  background-color: #f8fafc;
+  color: #1f2937;
+}
+
+body.light-mode main {
+  background-color: #f8fafc;
+}
+
+
+/* Navigation */
+
+body.light-mode nav {
+  background-color: #ffffff;
+}
+
+body.light-mode ul.side-nav {
+  background-color: #ffffff;
+}
+
+body.light-mode ul.side-nav.fixed li.logo {
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+body.light-mode ul.side-nav.fixed a {
+  color: #475569;
+}
+
+body.light-mode ul.side-nav.fixed a:hover {
+  color: #0284c7;
+}
+
+body.light-mode ul.side-nav.fixed.table-of-contents li:not(.logo) a.active,
+body.light-mode ul.side-nav.fixed.table-of-contents li:not(.logo) a:hover {
+  background-color: #f1f5f9;
+  border-left-color: #0284c7;
+}
+
+body.light-mode ul.side-nav.fixed.table-of-contents li:not(.logo) a span,
+body.light-mode ul#slide-out li:not(.logo) a span {
+  color: #475569 !important;
+}
+
+body.light-mode ul.side-nav.fixed.table-of-contents li:not(.logo) a.active span,
+body.light-mode ul.side-nav.fixed.table-of-contents li:not(.logo) a:hover span {
+  color: #0284c7 !important;
+}
+
+
+/* Theme Toggle */
+
+body.light-mode .theme-toggle {
+  color: #475569;
+}
+
+body.light-mode .theme-toggle:hover {
+  color: #0284c7;
+  background-color: #f1f5f9;
+}
+
+
+/* Mobile Navigation */
+
+body.light-mode nav.hide-on-large.only.trigger {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode nav a.button-collapse,
+body.light-mode nav a.button-collapse i {
+  color: #0284c7;
+}
+
+body.light-mode .name-title a {
+  color: #0284c7 !important;
+}
+
+body.light-mode .name-title span {
+  color: #475569 !important;
+}
+
+
+/* Hero Section */
+
+body.light-mode #intro.section {
+  background:
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(14, 165, 233, 0.15),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #e0f2fe 0%,
+      #f8fafc 50%,
+      #dbeafe 100%
+    );
+}
+
+body.light-mode #intro.section .container {
+  color: #0f172a;
+}
+
+body.light-mode #intro.section .container *:not(span) {
+  text-shadow: none;
+}
+
+body.light-mode #intro.section h5 {
+  color: #334155 !important;
+}
+
+body.light-mode .overlay {
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(14, 165, 233, 0.08),
+      transparent 30%
+    );
+}
+
+
+/* Cards */
+
+body.light-mode .card {
+  background-color: #ffffff;
+
+  box-shadow:
+    0 4px 15px rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode .card:hover {
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.14);
+}
+
+body.light-mode .card-action {
+  background-color: #f8fafc;
+}
+
+body.light-mode #experience .card-action {
+  background-color: #f1f5f9;
+}
+
+body.light-mode .card-action span {
+  color: #64748b;
+}
+
+
+/* Headings */
+
+body.light-mode .page-title {
+  background:
+    linear-gradient(
+      135deg,
+      #e0f2fe,
+      #bae6fd
+    ) !important;
+
+  color: #0f172a !important;
+
+  border-left-color: #0284c7;
+}
+
+
+/* Skills */
+
+body.light-mode #skills h4 {
+  color: #075985;
+  border-bottom-color: #e2e8f0;
+}
+
+
+/* Places */
+
+body.light-mode #places h4 {
+  color: #075985;
+  border-bottom-color: #e2e8f0;
+}
+
+body.light-mode #places h5 {
+  color: #0284c7;
+}
+
+
+/* Contact */
+
+body.light-mode #contact a:not(.btn-floating) {
+  color: #0369a1;
+}
+
+body.light-mode #contact a:not(.btn-floating):hover {
+  color: #0284c7;
+}
+
+
+/* General Text */
+
+body.light-mode .grey-text {
+  color: #64748b !important;
+}

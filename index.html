@@ -194,7 +194,16 @@
           <span>Resume</span>
         </a>
       </li>
-
+<li class="bold theme-toggle-item">
+  <button
+    id="theme-toggle"
+    class="theme-toggle"
+    type="button"
+    aria-label="Switch to light mode">
+    <i class="fa fa-sun-o"></i>
+    <span>Light Mode</span>
+  </button>
+</li>
     </ul>
   </nav>
 
@@ -295,6 +304,17 @@
           <span>Resume</span>
         </a>
       </li>
+
+      <li class="bold theme-toggle-item">
+  <button
+    id="theme-toggle-mobile"
+    class="theme-toggle"
+    type="button"
+    aria-label="Switch to light mode">
+    <i class="fa fa-sun-o"></i>
+    <span>Light Mode</span>
+  </button>
+</li>
 
     </ul>
   </nav>
@@ -1990,6 +2010,97 @@
       });
 
     </script>
+    <!-- Activity 6: Light Mode Toggle -->
+<script>
+
+  const desktopThemeToggle =
+    document.getElementById("theme-toggle");
+
+  const mobileThemeToggle =
+    document.getElementById("theme-toggle-mobile");
+
+
+  function updateThemeToggle() {
+
+    const isLightMode =
+      document.body.classList.contains("light-mode");
+
+    const buttons = [
+      desktopThemeToggle,
+      mobileThemeToggle
+    ];
+
+    buttons.forEach(function (button) {
+
+      if (!button) return;
+
+      const icon = button.querySelector("i");
+      const text = button.querySelector("span");
+
+      if (isLightMode) {
+
+        icon.className = "fa fa-moon-o";
+        text.textContent = "Dark Mode";
+
+        button.setAttribute(
+          "aria-label",
+          "Switch to dark mode"
+        );
+
+      } else {
+
+        icon.className = "fa fa-sun-o";
+        text.textContent = "Light Mode";
+
+        button.setAttribute(
+          "aria-label",
+          "Switch to light mode"
+        );
+
+      }
+
+    });
+
+  }
+
+
+  function toggleTheme() {
+
+    document.body.classList.toggle("light-mode");
+
+    const isLightMode =
+      document.body.classList.contains("light-mode");
+
+    localStorage.setItem(
+      "portfolio-theme",
+      isLightMode ? "light" : "dark"
+    );
+
+    updateThemeToggle();
+
+  }
+
+
+  if (desktopThemeToggle) {
+    desktopThemeToggle.addEventListener("click", toggleTheme);
+  }
+
+  if (mobileThemeToggle) {
+    mobileThemeToggle.addEventListener("click", toggleTheme);
+  }
+
+
+  // Restore saved theme preference
+  const savedTheme =
+    localStorage.getItem("portfolio-theme");
+
+  if (savedTheme === "light") {
+    document.body.classList.add("light-mode");
+  }
+
+  updateThemeToggle();
+
+</script>
 
   </main>
 
