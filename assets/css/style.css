@@ -1389,3 +1389,39 @@ body.light-mode .contactme:hover {
 body.light-mode .grey-text {
   color: #64748b !important;
 }
+
+/* =========================================================
+   Sleek Section Title Accent
+   ========================================================= */
+
+h3 {
+  position: relative;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+
+  left: 40px;
+  bottom: 12px;
+
+  width: 55px;
+  height: 3px;
+
+  background: #38bdf8;
+  border-radius: 3px;
+
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.45);
+
+  transition: width 0.3s ease;
+}
+
+h3:hover::after {
+  width: 90px;
+}
+
+/* Light mode */
+body.light-mode h3::after {
+  background: #0284c7;
+  box-shadow: 0 0 8px rgba(2, 132, 199, 0.25);
+}
