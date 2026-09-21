@@ -1754,3 +1754,142 @@ body.light-mode .project-tools {
   }
 
 }
+/* About Section Revolving Animation */
+
+.about-skill-card {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: about-revolve 8s ease-in-out infinite;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+/* Stagger the cards so they do not all move at once */
+
+.about-skill-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.about-skill-card:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.about-skill-card:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+.about-skill-card:nth-child(4) {
+  animation-delay: 2.4s;
+}
+
+.about-skill-card:nth-child(5) {
+  animation-delay: 3.2s;
+}
+
+.about-skill-card:nth-child(6) {
+  animation-delay: 4s;
+}
+
+
+/* Gentle revolving movement */
+
+@keyframes about-revolve {
+
+  0% {
+    transform:
+      perspective(1000px)
+      rotateY(0deg)
+      translateY(0);
+  }
+
+  25% {
+    transform:
+      perspective(1000px)
+      rotateY(4deg)
+      translateY(-4px);
+  }
+
+  50% {
+    transform:
+      perspective(1000px)
+      rotateY(0deg)
+      translateY(0);
+  }
+
+  75% {
+    transform:
+      perspective(1000px)
+      rotateY(-4deg)
+      translateY(-4px);
+  }
+
+  100% {
+    transform:
+      perspective(1000px)
+      rotateY(0deg)
+      translateY(0);
+  }
+
+}
+
+
+/* Stronger effect when hovering */
+
+.about-skill-card:hover {
+  transform:
+    perspective(1000px)
+    rotateY(8deg)
+    translateY(-8px)
+    scale(1.02);
+
+  z-index: 5;
+}
+
+
+/* Make the animation slightly slower on smaller screens */
+
+@media (max-width: 600px) {
+
+  .about-skill-card {
+    animation-duration: 10s;
+  }
+
+}
+.about-skill-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(56, 189, 248, 0.8),
+    transparent
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  animation: revolving-border 3s linear infinite;
+
+  pointer-events: none;
+}
+
+
+@keyframes revolving-border {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
