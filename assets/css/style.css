@@ -1042,17 +1042,25 @@ small {
 }
 
 #projects-container .card {
-  height: 100%;
+  height: auto;
+  min-height: 0;
 }
 
 #projects-container .card-content {
-  min-height: 260px;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+#projects-container .card-content p {
+  max-height: none;
+  overflow: visible;
+  line-height: 1.7;
 }
 
 #load-more-projects {
   margin: 20px 0 40px;
 }
-
 /* =========================================================
    Activity 6 - Light Mode Theme
    ========================================================= */
@@ -1088,6 +1096,19 @@ small {
   background-color: #0b172a;
 }
 
+/* Contact button - Light Mode */
+
+body.light-mode .contactme {
+  color: #075985;
+  background-color: transparent;
+  border-color: #0284c7;
+}
+
+body.light-mode .contactme:hover {
+  color: #ffffff;
+  background-color: #0284c7;
+  border-color: #0284c7;
+}
 
 /* =========================================
    Activity 6: Light Mode Theme Toggle
@@ -1292,13 +1313,52 @@ body.light-mode .page-title {
 }
 
 
-/* Skills */
+/* =========================================================
+   Skills
+   ========================================================= */
 
-body.light-mode #skills h4 {
-  color: #075985;
-  border-bottom-color: #e2e8f0;
+#skills .card.large {
+  height: auto;
+  min-height: 0;
 }
 
+#skills h4 {
+  border-bottom: 1px solid #e2e8f0;
+
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+  color: #075985;
+}
+
+#skills .col img.responsive-img {
+  margin: 0 auto;
+
+  max-height: 100px;
+
+  padding-bottom: 10px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  display: table-cell;
+}
+
+#skills .card.large .card-content {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+#skills .card.large .card-content p {
+  color: inherit;
+
+  margin: 0;
+
+  padding: 15px 0;
+
+  line-height: 1.7;
+}
 
 /* Places Travelled */
 
