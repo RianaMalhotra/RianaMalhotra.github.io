@@ -22,7 +22,8 @@
 
 
 /* 
-   Tracker */
+   Tracker
+*/
 
 .tracker {
   position: fixed;
@@ -32,13 +33,15 @@
 
 
 /* 
-   Fonts */
+   Fonts
+*/
 
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
 
 /* 
-   Social Icons */
+   Social Icons
+*/
 
 .social {
   margin: 0 auto;
@@ -97,7 +100,8 @@
 
 
 /* 
-   Buttons - Read More, Contact Me */
+   Buttons - Read More, Contact Me
+*/
 
 .readme {
   position: relative;
@@ -172,7 +176,7 @@ body {
 
 /* 
    Main Links
-  */
+*/
 
 a {
   color: #0369a1;
@@ -185,7 +189,7 @@ a:hover {
 
 /*
    Blockquote
-    */
+*/
 
 blockquote {
   border-left: 5px solid #38bdf8;
@@ -210,7 +214,7 @@ blockquote * {
 
 /* 
    Navigation
-   */
+*/
 
 nav {
   background: #07111f;
@@ -227,7 +231,7 @@ nav i {
 
 /* 
    Main
-    */
+*/
 
 main {
   background: #f8fafc;
@@ -252,7 +256,7 @@ dt {
 
 /* 
    Side Navigation
-    */
+*/
 
 ul.side-nav {
   width: 190px;
@@ -367,13 +371,6 @@ h3 {
    Intro / Hero Section
    ========================================================= */
 
-/* Original */
-
-/* #intro.section {
-  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
-  position: relative;
-} */
-
 #intro.section {
   background:
     radial-gradient(
@@ -418,7 +415,7 @@ h3 {
 
 /* 
    Hero Overlay
-    */
+*/
 
 .overlay {
   background:
@@ -438,7 +435,7 @@ h3 {
 
 /* 
    Waves
-    */
+*/
 
 .waves-effect.waves-blue .waves-ripple {
   background-color: rgba(56, 189, 248, 0.2);
@@ -688,6 +685,65 @@ a.hoverline:hover {
 
 
 /* =========================================================
+   Places Travelled - Activity 4
+   ========================================================= */
+
+#places .card {
+  margin-bottom: 40px;
+}
+
+#places .card-content {
+  padding: 30px;
+}
+
+#places h4 {
+  border-bottom: 1px solid #e2e8f0;
+
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+
+  color: #075985;
+}
+
+#places h5 {
+  color: #0284c7;
+
+  font-weight: 500;
+
+  margin-top: 10px;
+}
+
+#places p {
+  line-height: 1.7;
+}
+
+#places .row {
+  margin-bottom: 0;
+}
+
+#places iframe {
+  display: block;
+
+  width: 100%;
+  height: 450px;
+
+  border: 0;
+  border-radius: 10px;
+
+  margin-top: 20px;
+}
+
+#places .travel-map {
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 15px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================================
    Miscellaneous
    ========================================================= */
 
@@ -891,6 +947,16 @@ small {
     top: initial;
   }
 
+  /* Places Travelled mobile styling */
+
+  #places .card-content {
+    padding: 20px;
+  }
+
+  #places iframe {
+    height: 400px;
+  }
+
 }
 
 
@@ -948,6 +1014,20 @@ small {
 
   #intro.section {
     background-position-x: 30%;
+  }
+
+  /* Places Travelled mobile map */
+
+  #places h4 {
+    font-size: 24px;
+  }
+
+  #places h5 {
+    font-size: 21px;
+  }
+
+  #places iframe {
+    height: 350px;
   }
 
 }
