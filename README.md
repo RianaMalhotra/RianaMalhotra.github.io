@@ -1,75 +1,207 @@
 # Riana Malhotra
-## This repository is based on https://github.com/varadbhogayata/varadbhogayata.github.io.
 
-# Personal Portfolio ⚡️ 
-> A clean, beautiful, responsive portfolio template for Software Developers!
+## Personal Portfolio ⚡️
 
-> https://varadbhogayata.github.io
+This repository contains my personal portfolio website, showcasing my experience, projects, technical skills, education, and interests in software engineering, embedded systems, AI/ML, robotics, and aerospace technology.
 
-![GitHub stars](https://img.shields.io/github/stars/varadbhogayata/varadbhogayata.github.io) 
-![GitHub forks](https://img.shields.io/github/forks/varadbhogayata/varadbhogayata.github.io)
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/varadbhogayata/varadbhogayata.github.io/commits/master)
-[![Website shields.io](https://img.shields.io/badge/website-up-yellow)](http://varadbhogayata.github.io/)
-[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/varadbhogayata/)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+🌐 **Live Website:** https://RianaMalhotra.github.io/
 
-### Website Preview
-<p align="center"> 
+---
+
+## Website Preview
+
+<p align="center">
   <kbd>
-    <a href="https://varadbhogayata.github.io" target="_blank"><img src="examples/preview.gif">
-  </a>
+    <a href="https://RianaMalhotra.github.io/" target="_blank">
+      <img src="examples/preview.gif" alt="Riana Malhotra portfolio preview">
+    </a>
   </kbd>
 </p>
 
-:star: Star me on GitHub — it helps!
+---
 
-## Features 📋
-⚡️ Fully Responsive\
-⚡️ Valid HTML5 & CSS3\
-⚡️ Typing animation using `Typed.js`\
-⚡️ Easy to modify
+## About Me 👩‍💻
 
-## Installation & Deployment 📦
-- Clone the repository and modify the content of <b>index.html</b> according to your requirement.
-- Add or remove images from `varadbhogayata.github.io/assets/img/` directory as per your requirement.
-- I highly recommend to use [Github Pages](https://create-react-app.dev/docs/deployment/#github-pages) to deploy the website the EASIEST WAY.
-- To deploy your website, first you need to create github repository with name `<your-github-username>.github.io`. Please don't give any other name.
-- Push the generated code to the `master` branch of this repository.
-- <b>NOTE:</b> Make sure to set `analyticsId` from your Google Analytics account inside the Google Analytics script tag, if you want to use your own Google Analytics account.
+I am a Computer Engineering student at the University of Toronto pursuing a BASc with minors in Artificial Intelligence and Engineering Business.
 
-## Sections 📚
-✔️ About me\
-✔️ Experience\
-✔️ Projects \
-✔️ Skills \
-✔️ Education\
-✔️ Contact Info\
+My interests include:
+
+* Software Engineering
+* Embedded Systems
+* Artificial Intelligence and Machine Learning
+* Robotics and Autonomy
+* Computer Vision
+* Real-Time Systems
+* Aerospace Technology
+
+I enjoy building systems that combine software, hardware, and AI to solve real-world problems.
+
+---
+
+## Portfolio Sections 📚
+
+✔️ About Me
+✔️ Experience
+✔️ Projects
+✔️ Technical Skills
+✔️ Education
+✔️ Contact Information
 ✔️ Resume
 
-To view a live example, **[click here](https://varadbhogayata.github.io/)**
+---
 
-## Tools Used 🛠️
-* [<b>GitHub Pages</b>](https://create-react-app.dev/docs/deployment/#github-pages) - To host my static website (HTML, CSS, JS).
-* [<b>Materialize</b>](https://materializecss.com/) - A CSS framework to get Google's Material Design components.
-* [<b>Typed.js</b>](https://mattboldt.com/demos/typed-js/) - JavaScript Library
+## Featured Projects 🚀
 
-## Contributing 💡
-#### Step 1
+### Wildfire Early Detection
 
-- **Option 1**
-    - 🍴 Fork this repo!
+An AI-powered platform for wildfire detection, risk monitoring, and geospatial visualization using satellite imagery and environmental data.
 
-- **Option 2**
-    - 👯 Clone this repo to your local machine.
+**Technologies:** Python, JavaScript, React, Node.js, REST APIs, AI/ML, Computer Vision, Geospatial Data
 
+### BreadCrumb Trail
 
-#### Step 2
+An AI-assisted navigation application combining web technologies with embedded hardware and location-aware navigation.
 
-- **Build your code** 🔨🔨🔨
+**Technologies:** JavaScript, React, Node.js, REST APIs, Gemini API, ElevenLabs API, Arduino Uno Q, GNSS, UART, GSM
 
-#### Step 3
+### TransitFlow
 
-- 🔃 Create a new pull request.
+A transit route optimization application implementing graph algorithms and metaheuristics to improve route planning.
+
+**Technologies:** C++, EZGL, GTK, A*, Dijkstra, Ant Colony Optimization, 2-opt, Simulated Annealing
+
+### TelMe
+
+A telecommunications-focused application developed during a GenAI hackathon, combining a web frontend with a Python backend and data processing.
+
+**Technologies:** Python, Flask, React, Node.js, REST APIs, K-means
+
+### FPGA Pong
+
+A hardware implementation of Pong using RTL design and FPGA-based digital logic.
+
+**Technologies:** SystemVerilog, FPGA, RTL, Digital Logic
+
+### ECE243 DJ Booth
+
+An embedded DJ booth system integrating a Nios V processor with hardware peripherals and software components.
+
+**Technologies:** C, Nios V, FPGA, Embedded Systems, Digital Logic
+
+---
+
+## Experience 💼
+
+### Trimble Applanix
+
+**Production Test Engineer Intern**
+
+Worked on production testing, firmware validation, automation, and diagnostics for GNSS/INS navigation systems.
+
+**Technologies:** C++, C#, Python, QNX, Linux, CAN, UART, GNSS/INS
+
+### University of Toronto Aviation Club
+
+**President**
+
+Lead initiatives and coordinate events for students interested in aviation and aerospace.
+
+### University of Toronto Engineering Design Teams
+
+**Engineering Team Member**
+
+Contributed to hands-on engineering projects involving software, embedded systems, hardware integration, testing, and technical problem-solving.
+
+---
+
+## Technologies & Skills 🛠️
+
+**Languages:**
+C++, C, Python, C#, Java, JavaScript, TypeScript, Verilog, SQL, MATLAB
+
+**Software Engineering:**
+Data Structures & Algorithms, Object-Oriented Programming, Multithreading, Performance Optimization, Testing, Regression Testing, REST APIs, CI/CD
+
+**Web:**
+React, Node.js, Next.js, Flask, HTML/CSS, SQL
+
+**AI/ML:**
+PyTorch, NumPy, Computer Vision, Image Processing, Generative AI
+
+**Systems:**
+Linux/UNIX, QNX RTOS, Embedded Systems, FPGA, Digital Logic
+
+**Hardware:**
+STM32, GPIO, Timers, UART, CAN, RTL, SystemVerilog
+
+**Tools:**
+Git, GitHub, Agile, Code Reviews, Debugging, Regression Testing
+
+---
+
+## Technologies Used on This Website 🌐
+
+* **HTML5 & CSS3** - Website structure and styling
+* **JavaScript** - Interactive functionality
+* **Materialize** - Responsive UI components and layout
+* **Typed.js** - Typing animation
+* **GitHub Pages** - Website hosting
+
+---
+
+## Development & Deployment 📦
+
+To run the portfolio locally:
+
+```bash
+git clone https://github.com/RianaMalhotra/RianaMalhotra.github.io.git
+cd RianaMalhotra.github.io
+```
+
+Open `index.html` in a browser or use a local development server such as VS Code Live Server.
+
+Changes can be deployed through GitHub Pages by pushing them to the repository.
+
+---
+
+## Repository Structure 📁
+
+```text
+.
+├── assets/
+│   ├── css/
+│   ├── img/
+│   ├── resume/
+│   └── vendor/
+├── examples/
+├── index.html
+├── README.md
+└── LICENSE
+```
+
+---
+
+## Original Template Credit
+
+This portfolio is based on the open-source portfolio template originally created by **Varad Bhogayata**.
+
+Original repository:
+https://github.com/varadbhogayata/varadbhogayata.github.io
+
+The original template was modified substantially to reflect my own content, experience, projects, technical skills, visual theme, and portfolio structure.
+
+---
+
+## Connect With Me 🔗
+
+**GitHub:** https://github.com/RianaMalhotra
+
+**LinkedIn:** https://www.linkedin.com/in/riana-malhotra/
+
+**Portfolio:** https://RianaMalhotra.github.io/
+
+---
 
 ## License 📄
-This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+
+This project is based on the original template's MIT License. See [LICENSE](./LICENSE) for details.
