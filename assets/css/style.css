@@ -1806,7 +1806,11 @@ body.light-mode .project-tools {
   }
 
 }
-
+/* Slightly shorter intro section */
+.intro-short {
+  height: 88vh !important;
+  min-height: 88vh !important;
+}
 
 
 
