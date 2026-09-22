@@ -1754,14 +1754,6 @@ body.light-mode .project-tools {
   }
 
 }
-/* About Section Revolving Animation */
-
-.about-skill-card {
-  position: relative;
-  transform-style: preserve-3d;
-  animation: about-revolve 8s ease-in-out infinite;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
 
 
 /* Stagger the cards so they do not all move at once */
@@ -1791,47 +1783,6 @@ body.light-mode .project-tools {
 }
 
 
-/* Gentle revolving movement */
-
-@keyframes about-revolve {
-
-  0% {
-    transform:
-      perspective(1000px)
-      rotateY(0deg)
-      translateY(0);
-  }
-
-  25% {
-    transform:
-      perspective(1000px)
-      rotateY(4deg)
-      translateY(-4px);
-  }
-
-  50% {
-    transform:
-      perspective(1000px)
-      rotateY(0deg)
-      translateY(0);
-  }
-
-  75% {
-    transform:
-      perspective(1000px)
-      rotateY(-4deg)
-      translateY(-4px);
-  }
-
-  100% {
-    transform:
-      perspective(1000px)
-      rotateY(0deg)
-      translateY(0);
-  }
-
-}
-
 
 /* Stronger effect when hovering */
 
@@ -1855,41 +1806,7 @@ body.light-mode .project-tools {
   }
 
 }
-.about-skill-card::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  padding: 2px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(56, 189, 248, 0.8),
-    transparent
-  );
-
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-
-  animation: revolving-border 3s linear infinite;
-
-  pointer-events: none;
-}
 
 
-@keyframes revolving-border {
 
-  0% {
-    transform: rotate(0deg);
-  }
 
-  100% {
-    transform: rotate(360deg);
-  }
-
-}
